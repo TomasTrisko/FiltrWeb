@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukázka filtrování dat</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Ukázka filtrování dat</h1>
+
+    <!-- Horizontální menu -->
+    <div id="menu">
+        <a href="#tabulka">Tabulka</a>
+        <a href="#formular">Formulář</a>
+    </div>
+
+    <!-- Sekce Tabulka -->
+    <section id="tabulka" class="section">
+        <h2>Tabulka</h2>
+        <input type="text" id="filterInput" placeholder="Filtruj města...">
+        <table border="1" id="cityTable">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>město</th>
+                    <th>počet obyvatel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Česká Kamenice</td>
+                    <td>5082</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Brno</td>
+                    <td>400566</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Děčín</td>
+                    <td>46626</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Praha</td>
+                    <td>1384732</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ústí n. Labem</td>
+                    <td>91342</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Varnsdorf</td>
+                    <td>14512</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sekce Formuláře -->
+    <section id="formular" class="section">
+        <h2>Formulář</h2>
+        <form>
+            <label for="citySelect">Vyber město:</label><br>
+            <input type="text" id="formFilterInput" placeholder="Filtruj města..."><br><br>
+            <select id="citySelect" name="mesto">
+                <option value="ceskaKamenice">Česká Kamenice</option>
+                <option value="brno">Brno</option>
+                <option value="decin">Děčín</option>
+                <option value="praha">Praha</option>
+                <option value="usti">Ústí n. Labem</option>
+                <option value="varnsdorf">Varnsdorf</option>
+            </select><br><br>
+            <input type="submit" value="Odeslat">
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
